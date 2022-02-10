@@ -21,11 +21,12 @@
                 2. Selecciona alguno de los temas que aparecen a continuación:
                 </div>
                 <div class="options">
-                    <input type="submit" value="Carreras">
-                    <input type="submit" value="Admisiones">
-                    <input type="submit" value="Trabajo">
+                    <input type="submit" id="carrera" value="Carreras">
+                    <input type="submit" id="admision" value="Admisiones">
+                    <input type="submit" id="servicio" value="Servicios">
                 </div>
                 <!--Mensajes del usuario-->
+
         </div>
             <!-- messages input field -->
             <div id="userInput">
@@ -38,43 +39,6 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
-    <!-- Jquery Start -->
-    <!-- <script>
-        $(document).ready(function(){
-            $("#messages").on("keyup",function(){
-
-                if($("#messages").val()){
-                    $("#send").css("display","block");
-                }else{
-                    $("#send").css("display","none");
-                }
-            });
-        });
-        // when send button clicked
-        $("#send").on("click",function(e){
-            $userMessage = $("#messages").val();
-            $appendUserMessage = '<div class="chat usersMessages">'+ $userMessage +'</div>';
-            $("#messageDisplaySection").append($appendUserMessage);
-
-            // ajax start
-            $.ajax({
-                url: "./include/bot.php",
-                type: "POST",
-                // sending data
-                data: {messageValue: $userMessage},
-                // response text
-                success: function(data){
-                    // show response
-                    $appendBotResponse = '<div id="messagesContainer"><div class="chat botMessages">'+data+'</div></div>';
-                    
-                    $("#messageDisplaySection").append($appendBotResponse);
-                }
-            });
-            $("#messages").val("");
-            $("#send").css("display","none");
-        });
-    </script> -->
-
     <script src="./js/main.js"></script>
 </body>
 </html>

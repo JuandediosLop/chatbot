@@ -3,12 +3,14 @@
 // username = root
 // password = "" (blank)
 // database Name = your database name
-    
+
 $conn = mysqli_connect("localhost","root","","chatuvg");
 
 if($conn){ 
-    $user_messages = mysqli_real_escape_string($conn, $_POST['messageValue']);
 
+
+    $user_messages = mysqli_real_escape_string($conn, $_POST['messageValue']);
+    
     $query = "SELECT * FROM carreras WHERE nombre LIKE '%$user_messages%'";
 
     $runQuery = mysqli_query($conn, $query);

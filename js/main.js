@@ -21,6 +21,7 @@ $(document).ready(function () {
 });
 
 //función para añadir el mensaje del usuario
+
 function enviarMensajeUser() {
   $userMessage = $("#messages").val();
   $appendUserMessage = `<div class="chat usersMessages">
@@ -72,4 +73,19 @@ $("#admision").on("click", function () {
 $("#servicio").on("click", function () {
   $("#messages").val("Servicios");
   enviarMensajeUser();
+});
+
+//metodo para mostrar chat
+$("#botonChat").on("click", function () {
+  $("#screen").css("display", "block");
+});
+
+//metodo para cerrar chat
+$("#botonCerrar").on("click", function () {
+  $("#screen").css("display", "none");
+});
+
+$("#botonAct").on("click", function () {
+  $(".messagesContainer").remove();
+  $(".usersMessages").remove();
 });

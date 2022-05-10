@@ -46,7 +46,12 @@ function enviarMensajeUser() {
                             </div>`;
 
       $("#messageDisplaySection").append($appendBotResponse);
-    },
+      
+  // let utterance = new SpeechSynthesisUtterance(data)
+  // utterance.lang = 'es-ES'
+  // speechSynthesis.speak(utterance)    
+},
+   
   });
   $("#messages").val("");
   $("#send").css("display", "none");
